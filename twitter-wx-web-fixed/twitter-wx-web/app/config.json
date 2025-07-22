@@ -1,8 +1,0 @@
-{
-  "username": "admin",
-  "password": "123456",
-  "bearer_token": "",
-  "serverchan_key": "",
-  "poll_interval": 60,
-  "twitter_users": ["elonmusk", "naval"]
-}
