@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>控制台</title></head>
+<body>
+<h2>Twitter → 微信 转发系统</h2>
+<p style="color:green">{{ msg }}</p>
+<form method="post">
+  Twitter Bearer Token：<input name="bearer_token" value="{{ config.bearer_token }}"><br>
+  Server酱 KEY：<input name="serverchan_key" value="{{ config.serverchan_key }}"><br>
+  轮询时间（秒）：<input name="poll_interval" value="{{ config.poll_interval }}"><br>
+  监听推特用户（用英文逗号分隔）：<br>
+  <textarea name="twitter_users" rows="2" cols="40">{{ config.twitter_users | join(",") }}</textarea><br>
+  <button type="submit">保存配置</button>
+</form>
+<br><a href="/logout">退出登录</a>
+<h3>运行日志：</h3>
+<pre style="background:#eee; border:1px solid #ccc; padding:10px">
+{% for line in logs %}
+{{ line }}
+{% endfor %}
+</pre>
+</body>
+</html>
