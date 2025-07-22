@@ -1,0 +1,6 @@
+# 忽略配置和日志文件
+app/config.json
+app/log.txt
+__pycache__/
+*.pyc
+.env
